@@ -24,6 +24,7 @@ Y = train[["prognosis"]]
 X = train.drop(["prognosis"],axis=1)
 P = test.drop(["prognosis"],axis=1)
 xtrain,xtest,ytrain,ytest = train_test_split(X,Y,test_size=0.2,random_state=42
+
 #Model 1 - Decision Tree
 dtc= DecisionTreeClassifier(random_state=42)
 model_dtc = dtc.fit(xtrain,ytrain)
